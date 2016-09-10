@@ -144,6 +144,7 @@ h1.page-title { margin:95px auto 0; width: 100%; }
 .deep-gray-text { color: #464646 !important; }
 .deep-light-gray-text { color: #878787 !important; }
 .gray-text {  color:#7f7f7f !important}
+.blue-text {  color:#00a2e1 !important}
 .dark-gray-text { color:#373737 !important}
 
 /* letter spacing */
@@ -192,7 +193,7 @@ i { color: #9a9a9a; margin: 0 3px}
 .bg-deep-yellow{ background: #f7f5e7 !important; }
 .bg-golden-yellow{ background: #c3bd86 !important; }
 .bg-fast-yellow{ background: #fdd947 !important; }
-.bg-dark-gray{ background: #252525 !important; }
+.bg-dark-gray{ background: #00a2e1 !important; }
 .bg-mid-gray{ background: #d4d4d4 !important; }
 .bg-black{ background: #000000 !important; }
 .bg-highlight{ background: #345b8f !important; text-align:center}
@@ -412,7 +413,7 @@ nav .container{ display: table-cell; vertical-align: middle; height: 80px; posit
 .shrink-nav .container { height: 60px; }
 .shrink-nav { background-color:#FFF; }
 .sticky-nav{ position: fixed; top: 0px; display: inline-table;}
-.logo { max-width: 109px; }
+.logo { max-width: 160px; }
 .logo-style-2 { max-width: 177px; }
 .logo-style-3 { max-width: 210px; }
 .sticky-nav .logo-light { height: 55px; vertical-align: middle; display: table-cell;}
@@ -637,8 +638,8 @@ footer ul.list-inline li:first-child {padding-left: 6px}
 .footer-social a:last-child {margin-right: 0}
 .footer-social a i {color: #000; }
 .footer-social a:hover i { color: #868686}
-.copyright { font-size: 11px; text-transform:uppercase; color: #888888 }
-.footer-logo img { max-width: 100px;}
+.copyright { font-size: 11px; text-transform:uppercase; color: #fff }
+.footer-logo img { max-width: 160px;}
 .footer-bottom { position: relative; top:1px}
 
 /* ===================================
@@ -1298,7 +1299,7 @@ figure:hover img { -ms-transform: scale(1.1,1.1); -webkit-transform: scale(1.1,1
 .btn-very-small-white:hover { background-color: #FFF; color: #000}
 
 .btn-black{ border: 2px solid #000; color: #fff; display: inline-block; background-color: #000; padding: 7px 20px 8px; width: auto;}
-.btn-black:hover {border: 2px solid #000; color: #000; background-color: transparent}
+.btn-black:hover {border: 2px solid #00a2e1; color: #00a2e1; background-color: transparent}
 
 .highlight-button-black-border{ border: 4px solid #000; background-color: transparent; font-size: 22px; padding: 20px 30px; color: #000; font-weight: 700}
 .highlight-button-black-border:hover { border: 4px solid #000; background-color: #000; color: #fff}
