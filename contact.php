@@ -7,7 +7,7 @@
 	$comment=$_POST["comment"];
 	
 	// Email Receiver Address
-	$receiver="cellexpress@gigmade.com";
+	$receiver="i.ahmedhosny@gmail.com";
 	$subject="Contact us form details from celexpress website";
 
 	$message = "
