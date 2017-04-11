@@ -1,0 +1,177 @@
+@import "../include/variables.scss";
+@import "../include/mixins.scss";
+
+$white: #fff;
+//
+// Custom Alert
+// --------------------------------------------------
+
+
+.has-success .help-block,
+.has-success .control-label,
+.has-success .radio,
+.has-success .checkbox,
+.has-success .radio-inline,
+.has-success .checkbox-inline,
+.has-success.radio label,
+.has-success.checkbox label,
+.has-success.radio-inline label,
+.has-success.checkbox-inline label {
+  color: #5cb85c;
+}
+
+.has-success .input-group-addon {
+  color: #5cb85c;
+  background-color: #dff0d8;
+}
+
+.has-success .form-control-feedback {
+  color: #5cb85c;
+}
+
+.has-warning .help-block,
+.has-warning .control-label,
+.has-warning .radio,
+.has-warning .checkbox,
+.has-warning .radio-inline,
+.has-warning .checkbox-inline,
+.has-warning.radio label,
+.has-warning.checkbox label,
+.has-warning.radio-inline label,
+.has-warning.checkbox-inline label {
+  color: #ffb142;
+}
+
+
+.has-warning .input-group-addon {
+  color: #ffb142;
+  border-color: #ffb142;
+  background-color: #fcf8e3;
+}
+
+.has-warning .form-control-feedback {
+  color: #ffb142;
+}
+
+.has-error .help-block,
+.has-error .control-label,
+.has-error .radio,
+.has-error .checkbox,
+.has-error .radio-inline,
+.has-error .checkbox-inline,
+.has-error.radio label,
+.has-error.checkbox label,
+.has-error.radio-inline label,
+.has-error.checkbox-inline label {
+  color: #ff4242;
+}
+
+.has-error .input-group-addon {
+  color: #ff4242;
+  background-color: #ff4242;
+}
+
+.has-error .form-control-feedback {
+  color: #ff4242;
+}
+
+.has-feedback label ~ .form-control-feedback {
+  top: 37px;
+}
+
+.has-feedback label.sr-only ~ .form-control-feedback {
+  top: 0;
+}
+
+#form-output-global {
+  position: fixed;
+  bottom: 30px;
+  left: 15px;
+  visibility: hidden;
+  -webkit-transform: translateX(-500px);
+  transform: translateX(-500px);
+  transition: .3s all ease;
+  z-index: 9999999;
+}
+
+#form-output-global.active {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  visibility: visible;
+}
+
+@media (min-width: 480px) {
+  #form-output-global {
+    left: 30px;
+  }
+}
+
+.form-output {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-top: 2px;
+  transition: .3s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.form-output.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.form-output.error {
+  color: #ff4242;
+}
+
+.form-output.success {
+  color: #5cb85c;
+}
+
+// Snackbars
+// -------------------------
+
+.snackbars {
+  max-width: 280px;
+  padding:  9px 16px;
+  margin-left: auto;
+  margin-right: auto;
+  color: $white;
+  text-align: left;
+  background-color: $secondary2;
+
+  .icon-xxs {
+    font-size: 28px;
+    vertical-align: bottom;
+  }
+
+  // padding on text
+  p span:last-child {
+    padding-left: 14px;
+  }
+
+  // snackbar icon on the left side
+  &-left {
+    display: inline-block;
+    margin-bottom: 0;
+  }
+
+  // snackbar link or button on the right side
+  &-right {
+    display: inline-block;
+    float: right;
+    text-transform: uppercase;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  @media (min-width: 480px) {
+    max-width: 380px;
+    padding:  14px 17px;
+  }
+}
