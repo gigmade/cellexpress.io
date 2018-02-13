@@ -11,66 +11,66 @@ function isIE() {
  * attachFormValidator
  * @description  attach form validation to elements
  */
-function attachFormValidator(elements) {
-  for (var i = 0; i < elements.length; i++) {
-    var o = $(elements[i]), v;
-    o.addClass("form-control-has-validation").after("<span class='form-validation'></span>");
-    v = o.parent().find(".form-validation");
-    if (v.is(":last-child")) {
-      o.addClass("form-control-last-child");
-    }
-  }
+// function attachFormValidator(elements) {
+//   for (var i = 0; i < elements.length; i++) {
+//     var o = $(elements[i]), v;
+//     o.addClass("form-control-has-validation").after("<span class='form-validation'></span>");
+//     v = o.parent().find(".form-validation");
+//     if (v.is(":last-child")) {
+//       o.addClass("form-control-last-child");
+//     }
+//   }
 
-  elements
-    .on('input change propertychange blur', function (e) {
-      var $this = $(this), results;
+//   elements
+//     .on('input change propertychange blur', function (e) {
+//       var $this = $(this), results;
 
-      if (e.type != "blur") {
-        if (!$this.parent().hasClass("has-error")) {
-          return;
-        }
-      }
+//       if (e.type != "blur") {
+//         if (!$this.parent().hasClass("has-error")) {
+//           return;
+//         }
+//       }
 
-      if ($this.parents('.rd-mailform').hasClass('success')) {
-        return;
-      }
+//       if ($this.parents('.rd-mailform').hasClass('success')) {
+//         return;
+//       }
 
-      if ((results = $this.regula('validate')).length) {
-        for (i = 0; i < results.length; i++) {
-          $this.siblings(".form-validation").text(results[i].message).parent().addClass("has-error")
-        }
-      } else {
-        $this.siblings(".form-validation").text("").parent().removeClass("has-error")
-      }
-    })
-    .regula('bind');
-}
+//       if ((results = $this.regula('validate')).length) {
+//         for (i = 0; i < results.length; i++) {
+//           $this.siblings(".form-validation").text(results[i].message).parent().addClass("has-error")
+//         }
+//       } else {
+//         $this.siblings(".form-validation").text("").parent().removeClass("has-error")
+//       }
+//     })
+//     .regula('bind');
+// }
 
 /**
  * isValidated
  * @description  check if all elemnts pass validation
  */
-function isValidated(elements) {
-  var results, errors = 0;
-  if (elements.length) {
-    for (j = 0; j < elements.length; j++) {
+// function isValidated(elements) {
+//   var results, errors = 0;
+//   if (elements.length) {
+//     for (j = 0; j < elements.length; j++) {
 
-      var $input = $(elements[j]);
+//       var $input = $(elements[j]);
 
-      if ((results = $input.regula('validate')).length) {
-        for (k = 0; k < results.length; k++) {
-          errors++;
-          $input.siblings(".form-validation").text(results[k].message).parent().addClass("has-error");
-        }
-      } else {
-        $input.siblings(".form-validation").text("").parent().removeClass("has-error")
-      }
-    }
+//       if ((results = $input.regula('validate')).length) {
+//         for (k = 0; k < results.length; k++) {
+//           errors++;
+//           $input.siblings(".form-validation").text(results[k].message).parent().addClass("has-error");
+//         }
+//       } else {
+//         $input.siblings(".form-validation").text("").parent().removeClass("has-error")
+//       }
+//     }
 
-    return errors == 0;
-  }
-  return true;
-}
+//     return errors == 0;
+//   }
+//   return true;
+// }
 
 /* cookie.JS
  ========================================================*/
@@ -106,21 +106,21 @@ include('js/jquery.easing.1.3.js');
 
 /* SMOOTH SCROLLIG
  ========================================================*/
-;
-(function ($) {
-  var o = $('html');
-  if (o.hasClass('desktop')) {
-    include('js/jquery.mousewheel.min.js');
-    include('js/jquery.simplr.smoothscroll.min.js');
+// ;
+// (function ($) {
+//   var o = $('html');
+//   if (o.hasClass('desktop')) {
+//     include('js/jquery.mousewheel.min.js');
+//     include('js/jquery.simplr.smoothscroll.min.js');
 
-    $(document).ready(function () {
-      $.srSmoothscroll({
-        step: 150,
-        speed: 800
-      });
-    });
-  }
-})(jQuery);
+//     $(document).ready(function () {
+//       $.srSmoothscroll({
+//         step: 150,
+//         speed: 800
+//       });
+//     });
+//   }
+// })(jQuery);
 
 /* Copyright Year
  ========================================================*/
